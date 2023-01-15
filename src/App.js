@@ -1,14 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 import ColorBox from "./contexts/ColorBox";
-import ColorContext from './contexts/Color';
+import { ColorProvider } from "./contexts/Color";
 
 function App() {
   return (
-      <ColorContext.Provider value={{color: 'red'}}>
+    <ColorProvider>
+      <div>
         <ColorBox />
-      </ColorContext.Provider>
-  )
+      </div>
+    </ColorProvider>
+  );
 }
 
 export default App;
